@@ -1,0 +1,19 @@
+GET http://localhost:8000/api/users
+
+###
+
+POST http://localhost:8000/api/users
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "test"
+}
+
+###
+DELETE http://localhost:8000/api/users
+Content-Type: application/json
+
+{
+  "id": 1
+}
