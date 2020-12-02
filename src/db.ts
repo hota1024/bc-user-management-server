@@ -1,10 +1,16 @@
 import { Connection, createConnection, Repository } from 'typeorm'
 
+let db: Connection
+
 /**
  * get db connection.
  */
 export const getConnection = async (): Promise<Connection> => {
-  const db = await createConnection({
+  if (db) {
+    return db
+  }
+
+  db = await createConnection({
     type: 'sqlite',
     database: 'db.sqlite',
     synchronize: true,
