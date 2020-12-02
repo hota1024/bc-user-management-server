@@ -16,6 +16,10 @@ app.use(bodyParser.json())
 
 /* → ここからRoutes */
 
+// GET /api/users → ユーザー一覧を返す
+// POST /api/users → ユーザーを作成する(req.data から email と password を抜き出して保存)
+// DELETE /api/users/:id → ユーザーを削除する（:idのユーザーを削除する）
+
 /* ← ここまでRoutes */
 
 app.listen(process.env.APP_PORT, () => {
