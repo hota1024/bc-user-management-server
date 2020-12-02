@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "lib"
+    "target": "ESNext",
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "moduleResolution": "Node"
   },
   "include": [
     "src"
